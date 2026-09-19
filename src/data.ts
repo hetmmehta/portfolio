@@ -80,6 +80,8 @@ export const experience = [
   },
 ]
 
+import type { ArtVariant } from './components/ProjectArt'
+
 export type Project = {
   name: string
   tagline: string
@@ -88,6 +90,7 @@ export type Project = {
   github?: string
   demo?: string
   status?: 'ongoing' | 'complete'
+  art: ArtVariant
 }
 
 export const projects: Project[] = [
@@ -100,6 +103,7 @@ export const projects: Project[] = [
     github: 'https://github.com/hetmmehta/DailyJournal',
     demo: 'https://dear-diary-het-fc19.vercel.app',
     status: 'ongoing',
+    art: 'diary',
   },
   {
     name: 'DocMind',
@@ -108,6 +112,7 @@ export const projects: Project[] = [
       'A production RAG system that ingests PDFs and documents, chunks and embeds them into a ChromaDB vector store, and enables semantic search with grounded, citation-backed answers via a LangChain + Gemini pipeline.',
     stack: ['Python', 'LangChain', 'ChromaDB', 'Gemini', 'Flask', 'React'],
     github: 'https://github.com/hetmmehta/DocMind',
+    art: 'docmind',
   },
   {
     name: 'StockApp',
@@ -116,6 +121,7 @@ export const projects: Project[] = [
       'A full-stack stock analysis app integrating Finnhub and Polygon.io APIs for real-time price feeds, ticker search, and historical OHLC data with interactive candlestick and time-series charts. Deployed on GCP App Engine with automated scaling.',
     stack: ['Node.js', 'Angular', 'TypeScript', 'MongoDB', 'GCP'],
     github: 'https://github.com/hetmmehta/StockApp',
+    art: 'stock',
   },
   {
     name: 'Atelier',
@@ -124,6 +130,7 @@ export const projects: Project[] = [
       'A full-stack AI styling platform integrating LLM and computer vision APIs for clothing attribute detection and personalized outfit generation via natural language prompt engineering, with microservices architecture and TanStack Query async state management.',
     stack: ['Python', 'React', 'TypeScript', 'LLM', 'Computer Vision APIs'],
     github: 'https://github.com/hetmmehta/Atelier',
+    art: 'atelier',
   },
   {
     name: 'Recipe Notebook',
@@ -132,6 +139,7 @@ export const projects: Project[] = [
       'A full-stack app to create, view, and delete recipes with real-time updates through Apollo GraphQL, an Angular front end, and a Node.js/MongoDB backend.',
     stack: ['Angular', 'Apollo GraphQL', 'Node.js', 'MongoDB', 'TypeScript'],
     github: 'https://github.com/hetmmehta/Meal_Planner',
+    art: 'recipe',
   },
   {
     name: 'Recruiter Reachout',
@@ -139,6 +147,7 @@ export const projects: Project[] = [
     description:
       'An end-to-end recruiter outreach tool powered by Google AI Studio (Gemini API) that accepts a job description URL, identifies the hiring company and relevant recruiter contacts, and drafts a personalized, role-specific cold email.',
     stack: ['Python', 'Flask', 'Google AI Studio', 'Gemini API'],
+    art: 'outreach',
   },
 ]
 
