@@ -1,5 +1,9 @@
 # Het Mehta — Portfolio
 
+[![GitHub stars](https://img.shields.io/github/stars/hetmmehta/portfolio?style=social)](https://github.com/hetmmehta/portfolio/stargazers)
+[![Repo views](https://komarev.com/ghpvc/?username=hetmmehta&repo=portfolio&label=Repo+views&color=4f46e5&style=flat)](https://github.com/hetmmehta/portfolio)
+[![Deploy status](https://github.com/hetmmehta/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/hetmmehta/portfolio/actions/workflows/deploy.yml)
+
 Personal portfolio site built with React, TypeScript, and Vite. Showcases my experience, skills, and projects, with links to live demos and source code.
 
 **Live site:** https://hetmmehta.github.io/portfolio/
