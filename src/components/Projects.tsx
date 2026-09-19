@@ -1,39 +1,43 @@
 import { projects } from '../data'
+import SectionHeading from './SectionHeading'
 
 export default function Projects() {
   return (
-    <section id="projects" className="section">
-      <h2 className="section-title">Projects</h2>
-      <div className="projects-grid">
-        {projects.map((p) => (
-          <div className="project-card" key={p.name}>
-            <div className="project-card-header">
-              <h3>{p.name}</h3>
-              {p.status === 'ongoing' && <span className="badge">In progress</span>}
+    <section id="work" className="section">
+      <SectionHeading index="01" title="Selected work" note={`${projects.length} projects`} />
+      <div className="work-list">
+        {projects.map((p, i) => (
+          <article className="work-row reveal" key={p.name} style={{ transitionDelay: `${Math.min(i, 4) * 60}ms` }}>
+            <span className="work-index">{String(i + 1).padStart(2, '0')}</span>
+            <div className="work-body">
+              <div className="work-title-row">
+                <h3>{p.name}</h3>
+                {p.status === 'ongoing' && <span className="badge">In progress</span>}
+              </div>
+              <p className="work-tagline">{p.tagline}</p>
+              <p className="work-desc">{p.description}</p>
+              <div className="tag-row">
+                {p.stack.map((s) => (
+                  <span className="tag" key={s}>
+                    {s}
+                  </span>
+                ))}
+              </div>
             </div>
-            <p className="project-tagline">{p.tagline}</p>
-            <p className="project-desc">{p.description}</p>
-            <div className="tag-row">
-              {p.stack.map((s) => (
-                <span className="tag" key={s}>
-                  {s}
-                </span>
-              ))}
-            </div>
-            <div className="project-links">
+            <div className="work-links">
               {p.github && (
-                <a href={p.github} target="_blank" rel="noreferrer">
-                  Code →
+                <a className="link-arrow" href={p.github} target="_blank" rel="noreferrer">
+                  Code
                 </a>
               )}
               {p.demo && (
-                <a href={p.demo} target="_blank" rel="noreferrer">
-                  Live demo →
+                <a className="link-arrow" href={p.demo} target="_blank" rel="noreferrer">
+                  Live
                 </a>
               )}
-              {!p.github && !p.demo && <span className="project-links-empty">Code coming soon</span>}
+              {!p.github && !p.demo && <span className="work-links-empty">Code coming soon</span>}
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>

@@ -1,10 +1,7 @@
-import { profile } from '../data'
-
 const links = [
-  { href: '#about', label: 'About' },
+  { href: '#work', label: 'Work' },
   { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#education', label: 'Education' },
+  { href: '#skills', label: 'Skills' },
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -13,7 +10,7 @@ export default function Nav() {
     <header className="nav">
       <div className="nav-inner">
         <a className="nav-brand" href="#top">
-          {profile.name}
+          Het Mehta
         </a>
         <nav className="nav-links">
           {links.map((l) => (

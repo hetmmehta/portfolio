@@ -1,27 +1,33 @@
 import { certifications, education } from '../data'
+import SectionHeading from './SectionHeading'
 
 export default function Education() {
   return (
     <section id="education" className="section">
-      <h2 className="section-title">Education</h2>
-      <div className="timeline">
+      <SectionHeading index="04" title="Education" />
+      <div className="exp-list">
         {education.map((e) => (
-          <div className="timeline-item" key={e.school}>
-            <div className="timeline-header">
-              <h3>{e.school}</h3>
-              <span className="timeline-period">{e.period}</span>
+          <div className="exp-row reveal" key={e.school}>
+            <div className="exp-period">{e.period}</div>
+            <div className="exp-body">
+              <div className="exp-header">
+                <h3>{e.school}</h3>
+              </div>
+              <p className="exp-location">
+                {e.degree} · {e.detail}
+              </p>
             </div>
-            <p className="timeline-sub">{e.degree}</p>
-            <p className="timeline-sub">{e.detail}</p>
           </div>
         ))}
       </div>
-      <h3 className="cert-title">Certifications</h3>
-      <ul className="cert-list">
-        {certifications.map((c) => (
-          <li key={c}>{c}</li>
-        ))}
-      </ul>
+      <div className="cert-block reveal">
+        <span className="skills-category">Certifications</span>
+        <ul className="cert-list">
+          {certifications.map((c) => (
+            <li key={c}>{c}</li>
+          ))}
+        </ul>
+      </div>
     </section>
   )
 }
