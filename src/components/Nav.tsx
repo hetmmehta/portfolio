@@ -1,3 +1,5 @@
+import { profile } from '../data'
+
 const links = [
   { href: '#work', label: 'Work' },
   { href: '#experience', label: 'Experience' },
@@ -18,6 +20,9 @@ export default function Nav() {
               {l.label}
             </a>
           ))}
+          <a href={profile.resume} download="Het_Mehta_Resume.pdf">
+            Resume
+          </a>
         </nav>
       </div>
     </header>

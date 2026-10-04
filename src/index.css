@@ -369,11 +369,16 @@ h1, h2, h3 {
   margin: 0 0 10px;
 }
 
-.work-desc {
+.work-points {
   color: var(--text-muted);
   font-size: 0.92rem;
   margin: 0 0 16px;
-  max-width: 560px;
+  padding-left: 18px;
+  max-width: 600px;
+}
+
+.work-points li {
+  margin-bottom: 6px;
 }
 
 .work-links {

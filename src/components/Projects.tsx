@@ -34,7 +34,11 @@ export default function Projects() {
                 {p.status === 'ongoing' && <span className="badge">In progress</span>}
               </div>
               <p className="work-tagline">{p.tagline}</p>
-              <p className="work-desc">{p.description}</p>
+              <ul className="work-points">
+                {p.points.map((pt) => (
+                  <li key={pt}>{pt}</li>
+                ))}
+              </ul>
               <div className="tag-row">
                 {p.stack.map((s) => (
                   <span className="tag" key={s}>
